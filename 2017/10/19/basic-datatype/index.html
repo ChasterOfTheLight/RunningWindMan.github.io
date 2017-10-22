@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Devil&#39;s Blog">
 <meta property="og:description" content="就先来说说java的基础吧，首先说说数据类型。总体来说，包含两大方面的数据类型：内置数据类型和引用数据类型。 内置数据类型包括：1.数值型2.字符型3.布尔型数值型包括整数类型和浮点类型其中整型包括byte、short、int、long；浮点型包括float、double；字符型为char布尔型为boolean 引用数据类型引用数据类型包括类、接口和数组。  注意  &amp;gt; For type b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-19T13:52:22.149Z">
+<meta property="og:updated_time" content="2017-10-22T13:43:59.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java数据类型">
 <meta name="twitter:description" content="就先来说说java的基础吧，首先说说数据类型。总体来说，包含两大方面的数据类型：内置数据类型和引用数据类型。 内置数据类型包括：1.数值型2.字符型3.布尔型数值型包括整数类型和浮点类型其中整型包括byte、short、int、long；浮点型包括float、double；字符型为char布尔型为boolean 引用数据类型引用数据类型包括类、接口和数组。  注意  &amp;gt; For type b">
@@ -105,11 +105,69 @@
 &gt; For type char, the default value is the null character, that is, &apos;\u0000&apos;. 
 &gt; For type boolean, the default value is false.
 </code></pre><p>所有引用类型的默认值都是null。</p>
-
+<hr>
+<p><em>数据类型转换必须满足如下规则：</em></p>
+<ol>
+<li>不能对boolean类型进行类型转换。</li>
+<li>不能把对象类型转换成不相关类的对象。</li>
+<li>在把容量大的类型转换为容量小的类型时必须使用强制类型转换。</li>
+<li>转换过程中可能导致溢出或损失精度。</li>
+<li>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入。</li>
+</ol>
+<hr>
+<p><em>基本数据类型占位：</em></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>占位 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>1字节 </td>
+</tr>
+<tr>
+<td>short</td>
+<td>2字节      </td>
+</tr>
+<tr>
+<td>int</td>
+<td>4字节      </td>
+</tr>
+<tr>
+<td>long</td>
+<td>8字节      </td>
+</tr>
+<tr>
+<td>float</td>
+<td>4字节      </td>
+</tr>
+<tr>
+<td>double</td>
+<td>8字节      </td>
+</tr>
+<tr>
+<td>char</td>
+<td>2字节      </td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1字节     </td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>自动类型转换</em></p>
+<pre><code>必须满足转换前的数据类型的位数要低于转换后的数据类型。
+在java的世界里，如果比int类型小的类型做运算，java在编译的时候就会将它们统一强转成int类型。
+当是比int类型大的类型做运算，就会自动转换成它们中最大类型那个。
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://devilmygod.com/2017/10/19/basic-datatype/" data-id="cj8yj20co0004scah5dgdofq7" class="article-share-link">Share</a>
+      <a data-url="http://devilmygod.com/2017/10/19/basic-datatype/" data-id="cj92t3aut0002dgah0evwf9xz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
